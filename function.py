@@ -44,8 +44,6 @@ print(full_name('Ojo', 'Zainab'))
 
 
 # Task 2
-details = ['first_name', 'last_name', 'date of birth']
-
 
 def my_list(list_arg):
     """
@@ -62,12 +60,12 @@ def my_list(list_arg):
     return my_new_list
 
 
+details = ['first_name', 'last_name', 'date of birth']
+
 print(my_list(details))
 
 
 # Task 3
-name = ['Mayowa', 'chizoba', 'Chigozie']
-
 
 def name_check(name):
     """
@@ -93,13 +91,13 @@ def name_check(name):
     return my_names
 
 
+name = ['Mayowa', 'chizoba', 'Chigozie']
+
+
 print(name_check(name))
 
 
 # Task 4
-marketing_customers = ["Wofai", "Zainab", "A4atullah"]
-
-
 def marketing_customer_checks(market_customers):
     """
     A generic function that a function that fail 
@@ -121,4 +119,29 @@ def marketing_customer_checks(market_customers):
     return f"Invalid input for customer {new_market_list}. Kindly correct the entry"
 
 
+marketing_customers = ["Wofai", "Zainab", "A4atullah"]
+
 print(marketing_customer_checks(marketing_customers))
+
+
+# Task 5
+
+def bad_data_checker(data_entries):
+    """
+    A generic function that a function that filter out bad entries and accomodate yield function
+    Args:
+        list: A list containing elements
+    Returns:
+        the bad entries in the data
+    """
+    for name in data_entries:
+        if type(name) != str:
+            yield name
+
+
+entries = [4, 5, "mayowa", 10]
+bad_entries = list(bad_data_checker(entries))
+print(bad_entries)
+
+for x in bad_entries:
+    print(x)
