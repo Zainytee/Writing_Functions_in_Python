@@ -1,6 +1,10 @@
-import requests
 import pandas as pd
-api_url = "https://content.guardianapis.com/search?q=Nigeria&from-date=2025-01-01&api-key=test"
+import requests
+
+api_url = ("https://content.guardianapis.com/search?"
+           "q=Nigeria&"
+           "from-date=2025-01-01&"
+           "api-key=test")
 
 
 def get_results(api_url):
@@ -18,6 +22,7 @@ def get_results(api_url):
     else:
         print("Error in fetching data from the API provided")
     return api_data
+
 
 nga_article = get_results(api_url)
 

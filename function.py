@@ -1,5 +1,4 @@
 # Task 1
-
 def my_first_name(first_name):
     """
     A function that returns the first_name of anyone
@@ -26,7 +25,7 @@ def my_last_name(last_name):
 
 def full_name(first, last):
     """
-    A function that concatenate the first name 
+    A function that concatenate the first name
     and the last name that will be returned from those 2 functions above
 
     Args:
@@ -41,13 +40,12 @@ def full_name(first, last):
 
 
 print(full_name('Ojo', 'Zainab'))
-
-
 # Task 2
+
 
 def my_list(list_arg):
     """
-    A function that transform the name of the attributes to follow 
+    A function that transform the name of the attributes to follow
     the snake_case naming convention
 
     Args:
@@ -69,7 +67,7 @@ print(my_list(details))
 
 def name_check(name):
     """
-    A  function that extract names that begin with a capital letter and 
+    A  function that extract names that begin with a capital letter and
     end with letter a. Also convert names that begin with a capital letter but
     doesn’t end with letter a and convert its last letter to letter a
 
@@ -77,7 +75,8 @@ def name_check(name):
     Args:
         list: A list containing elements
     Returns:
-        it returna lsit of names that starts with capital letter and ends with a
+        it returna lsit of names that starts with capital
+        letter and ends with a
     """
 
     my_names = []
@@ -100,8 +99,9 @@ print(name_check(name))
 # Task 4
 def marketing_customer_checks(market_customers):
     """
-    A generic function that a function that fail 
-    if what they have inside that list doesn’t look like a valid name, i.e contains 
+    A generic function that a function that fail
+    if what they have inside that list doesn’t look
+    like a valid name, i.e contains
     only alphapets.
 
     Args:
@@ -116,7 +116,8 @@ def marketing_customer_checks(market_customers):
             new_market_list.append(name)
         else:
             pass
-    return f"Invalid input for customer {new_market_list}. Kindly correct the entry"
+    return (f"Invalid input for customer {new_market_list}. \n"
+            "Kindly correct the entry")
 
 
 marketing_customers = ["Wofai", "Zainab", "A4atullah"]
@@ -128,14 +129,15 @@ print(marketing_customer_checks(marketing_customers))
 
 def bad_data_checker(data_entries):
     """
-    A generic function that a function that filter out bad entries and accomodate yield function
+    A generic function that a function that filter out
+    bad entries and accomodate yield function
     Args:
         list: A list containing elements
     Returns:
         the bad entries in the data
     """
     for name in data_entries:
-        if type(name) != str:
+        if type(name) is not str:
             yield name
 
 

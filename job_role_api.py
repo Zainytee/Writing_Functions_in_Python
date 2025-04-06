@@ -1,15 +1,19 @@
 # import libary
-import requests
 import pandas as pd
+import requests
 
 # Task 1
-job_api_url = "https://jobicy.com/api/v2/remote-jobs?count=20&geo=usa&industry=marketing&tag=seo"
+job_api_url = "https://jobicy.com/api/v2/remote-jobs?" \
+               "count=20&" \
+               "geo=usa&" \
+               "industry=marketing&" \
+               "tag=seo"
 
 
 def get_results(api_url):
     """
     A generic function that retrieve data from a given API
-    Args: 
+    Args:
         An APi URL
     Returns:
         API data in json format
@@ -24,11 +28,9 @@ def get_results(api_url):
     return api_data
 
 
-
-
-
 # Checking the extracted data
 job_dict = get_results(job_api_url)
+
 
 df_job = pd.DataFrame(job_dict)
 
